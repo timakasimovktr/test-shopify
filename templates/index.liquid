@@ -1,3 +1,5 @@
+<div><h1>Hello</h1></div>
+
 {% for product in collections.frontpage.products limit:4 %}
   <div>
     <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
