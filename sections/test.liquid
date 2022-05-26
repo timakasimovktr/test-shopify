@@ -1,6 +1,6 @@
 <div class="block">
   <div class="left_block">
-    <img src="{{ section.settings.img | img_url: '570x' }}" alt="" />
+    <img src="{{ section.settings.img | img_url: 'section.settings.imgrange x' }}" alt="" />
   </div>
   <div class="right_block">
     <h2 id="block-title">{{ section.settings.blocktitle }}</h2>
@@ -18,12 +18,6 @@
   </div>
 </div>
 
-<style>
-  .left_block img {
-    width: 570px;
-    height: 570px;
-  }
-</style>
 
 {% schema %}
 {
@@ -43,7 +37,7 @@
 "max": 570,
 "step": 20,
 "unit": "px",
-"label": "Font size",
+"label": "Size of the image",
 "default": 570
 },
 {
