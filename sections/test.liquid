@@ -28,15 +28,16 @@
 <style>
 
 {%- if section.settings.pos -%}
-  {%- else -%}
-  {%- endif -%}
 .left_block{
-
+  order: 1;
 }
 
 .right_block{
-
+  order: 2;
 }
+{%- else -%}
+{%- endif -%}
+
 </style>
 
 {% schema %}
