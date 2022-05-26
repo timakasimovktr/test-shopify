@@ -1,12 +1,5 @@
 <div class="block">
   {%- if section.settings.fliprows -%}
-  Code that will execute if the checkbox is ticked in the theme customizer
-  {%- endif -%}
-  <div class="left_block">
-
-    <img src="{{ section.settings.img | image_url: width: section.settings.imagesize | loading: 'lazy' }}" alt="" />
-    
-  </div>
   <div class="right_block">
     {% comment %} <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px;"> {% endcomment %}
     <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px;">{{ section.settings.blocktitle }}</h2>
@@ -23,6 +16,14 @@
     {% endif %}
 
   </div>
+  <div class="left_block">
+
+    <img src="{{ section.settings.img | image_url: width: section.settings.imagesize | loading: 'lazy' }}" alt="" />
+    
+  </div>
+  {%- endif -%}
+  
+  
 </div>
 
 
