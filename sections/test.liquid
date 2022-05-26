@@ -8,7 +8,7 @@
   <div class="right_block">
     <h2 id="block-title">{{ section.settings.blocktitle }}</h2>
     <p id="block-text">
-      {{ section.settings.blocktext | font-size: section.settings.font_size }}
+      {{ section.settings.blocktext | inline: section.settings.font_size }}
     </p>
     {% if section.settings.link != blank and section.settings.linktext != blank %}
 
