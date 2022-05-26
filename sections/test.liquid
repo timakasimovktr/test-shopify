@@ -12,63 +12,68 @@
     <a href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
 
     {% else %}
-  
+
     {% endif %}
 
   </div>
 </div>
 
-stu
+<style>
+  .left_block img {
+    width: 570px;
+    height: 570px;
+  }
+</style>
 
 {% schema %}
- { 
-    "name": "Liquid Basics Example", 
-    "settings": 
-        [ 
-            { 
-                "type": "image_picker",
-                "id": "img", 
-                "label": "Title" 
-            },
-            {
-                "type": "range",
-                "id": "imgrange",
-                "label": "",
-                "min": 230,
-                "max": 570,
-                "step": 20,
-                "unit": "px",
-                "label": "Font size",
-                "default": 570
-            },
-            { 
-                "type": "text",
-                "id": "blocktitle", 
-                "label": "Title" 
-            },
-            {
-                "type": "textarea",
-                "id": "blocktext",
-                "label": "text"
-            },
-            {
-                "id": "link",
-                "type": "url",
-                "label": "Button link"
-            },
-            {
-                "id": "linktext",
-                "type": "text",
-                "label": "Button text",
-                "default": "Click Here"
-            }
-        ],
-    "presets": 
-        [ 
-            { 
-                "name": "Information Text",
-                "category": "Image" 
-            } 
-        ] 
- } 
- {% endschema %}
+{
+"name": "Liquid Basics Example",
+"settings":
+[
+{
+"type": "image_picker",
+"id": "img",
+"label": "Title"
+},
+{
+"type": "range",
+"id": "imgrange",
+"label": "",
+"min": 230,
+"max": 570,
+"step": 20,
+"unit": "px",
+"label": "Font size",
+"default": 570
+},
+{
+"type": "text",
+"id": "blocktitle",
+"label": "Title"
+},
+{
+"type": "textarea",
+"id": "blocktext",
+"label": "text"
+},
+{
+"id": "link",
+"type": "url",
+"label": "Button link"
+},
+{
+"id": "linktext",
+"type": "text",
+"label": "Button text",
+"default": "Click Here"
+}
+],
+"presets":
+[
+{
+"name": "Information Text",
+"category": "Image"
+}
+]
+}
+{% endschema %}
