@@ -1,4 +1,7 @@
 <div class="block">
+  {%- if section.settings.fliprows -%}
+  Code that will execute if the checkbox is ticked in the theme customizer
+  {%- endif -%}
   <div class="left_block">
 
     <img src="{{ section.settings.img | image_url: width: section.settings.imagesize | loading: 'lazy' }}" alt="" />
