@@ -1,6 +1,8 @@
 <div class="block">
   <div class="left_block">
-    <img src="{{ section.settings.img | image_url: width: section.settings.imgrange | loading: 'lazy' }}" alt="" />
+
+    <img src="{{ section.settings.img | img_url: '570x' | loading: 'lazy' }}" alt="" />
+
   </div>
   <div class="right_block">
     {% comment %} <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px;"> {% endcomment %}
