@@ -1,98 +1,117 @@
-<!-- {% assign img_settings = section.settings.imgrange | append: 'x'  %} -->
+< div class = "block" >
+  <
+  div class = "left_block" >
+  <
+  img src = "{{ section.settings.img | image_url: width: section.settings.imgrange | loading: 'lazy' }}"
+alt = "" / >
 
-<div class="block">
-  <div class="left_block">
-    <img src="{{ section.settings.img | image_url: width: section.settings.imgrange | loading: 'lazy' }}" alt="" />
+  <
+  /div> <
+  div class = "right_block" >
+  <
+  h2 id = "block-title"
+style = "font-size: {{- section.settings.title_font_size -}}px;" > {
+    {
+      section.settings.blocktitle
+    }
+  } < /h2> <
+  p id = "block-text"
+style = "font-size: {{- section.settings.font_size -}}px;" > {
+    {
+      section.settings.blocktext
+    }
+  } <
+  /p> {
+    %
+    if section.settings.link != blank and section.settings.linktext != blank %
+  }
 
-  </div>
-  <div class="right_block">
-    <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px;">{{ section.settings.blocktitle }}</h2>
-    <p id="block-text" style="font-size: {{- section.settings.font_size -}}px;">
-      {{ section.settings.blocktext }}
-    </p>
-    {% if section.settings.link != blank and section.settings.linktext != blank %}
+  <
+  a href = "{{ section.settings.link }}" > {
+    {
+      section.settings.linktext
+    }
+  } < /a>
 
-    <a href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
-
-    {% else %}
-
-    {% endif %}
-
-  </div>
-</div>
-
-<style>
-</style>
-
-{% schema %}
 {
-"name": "Liquid Basics Example",
-"settings":
-[
-{
-"type": "image_picker",
-"id": "img",
-"label": "Title"
-},
-{
-"type": "range",
-"id": "imgrange",
-"label": "",
-"min": 230,
-"max": 570,
-"step": 20,
-"unit": "px",
-"label": "Size of the image",
-"default": 570
-},
-{
-"type": "text",
-"id": "blocktitle",
-"label": "Title"
-},
-{
-  "type": "range",
-  "id": "title_font_size",
-  "min": 14,
-  "max": 50,
-  "step": 1,
-  "unit": "px",
-  "label": "Title font size",
-  "default": 30
-  },
-{
-"type": "textarea",
-"id": "blocktext",
-"label": "text"
-},
-{
-"type": "range",
-"id": "font_size",
-"min": 14,
-"max": 26,
-"step": 1,
-"unit": "px",
-"label": "Font size",
-"default": 16
-},
-{
-"id": "link",
-"type": "url",
-"label": "Button link"
-},
-{
-"id": "linktext",
-"type": "text",
-"label": "Button text",
-"default": "Click Here"
+  %
+  else %
 }
-],
-"presets":
-[
+
 {
-"name": "Information Text",
-"category": "Image"
+  % endif %
 }
-]
+
+<
+/div> <
+/div>
+
+<
+style >
+  <
+  /style>
+
+{
+  % schema %
+} {
+  "name": "Liquid Basics Example",
+  "settings": [{
+      "type": "image_picker",
+      "id": "img",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "imgrange",
+      "options": [],
+      "default": 570
+    },
+    {
+      "type": "text",
+      "id": "blocktitle",
+      "label": "Title"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "min": 14,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Title font size",
+      "default": 30
+    },
+    {
+      "type": "textarea",
+      "id": "blocktext",
+      "label": "text"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 14,
+      "max": 26,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 16
+    },
+    {
+      "id": "link",
+      "type": "url",
+      "label": "Button link"
+    },
+    {
+      "id": "linktext",
+      "type": "text",
+      "label": "Button text",
+      "default": "Click Here"
+    }
+  ],
+  "presets": [{
+    "name": "Information Text",
+    "category": "Image"
+  }]
+} {
+  % endschema %
 }
-{% endschema %}
