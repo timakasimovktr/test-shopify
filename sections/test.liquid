@@ -1,6 +1,5 @@
 <div class="block">
   <div class="left_block">
-    {% capture image_size %}{{ section.settings.imgrange }}x{% endcapture %}
     <img src="{{ section.settings.img | img_url: 'imgrange' }}" alt="" />
   </div>
   <div class="right_block">
