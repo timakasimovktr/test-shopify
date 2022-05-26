@@ -2,7 +2,7 @@
   
     <div class="left_block">
 
-      <img src="{{ section.settings.img | loading: 'lazy' }}" alt="" />
+      <img src="{{ section.settings.img | image_url: width: section.settings.imagesize | loading: 'lazy' }}" alt="" />
       
     </div>
     <div class="right_block">
@@ -26,11 +26,6 @@
 
 
 <style>
-
-.left_block img {
-  width: {{section.settings.imagesize}};
-  height: {{section.settings.imagesize}};
-}
 
 {%- if section.settings.pos -%}
 .left_block{
@@ -67,7 +62,7 @@
   "label" : "Image size",
   "options": [
     {
-    "value": "70%",
+    "value": "570px",
     "label": "Large size"
     },
     {
