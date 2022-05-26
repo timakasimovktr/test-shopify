@@ -6,7 +6,7 @@
 
   </div>
   <div class="right_block">
-    <h2 id="block-title">{{ section.settings.blocktitle }}</h2>
+    <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px;">{{ section.settings.blocktitle }}</h2>
     <p id="block-text" style="font-size: {{- section.settings.font_size -}}px;">
       {{ section.settings.blocktext }}
     </p>
@@ -58,7 +58,7 @@
   "step": 1,
   "unit": "px",
   "label": "Title font size",
-  "default": 16
+  "default": 30
   },
 {
 "type": "textarea",
