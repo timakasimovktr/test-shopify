@@ -1,6 +1,6 @@
 <div class="block">
   <div class="left_block">
-    <img src="{{ section.settings.img | img_url: 'master' | img_tag }}" alt="" />
+    <img src="{{ section.settings.img | img_url: 'master' | imgrange }}" alt="" />
   </div>
   <div class="right_block">
     <h2 id="block-title">{{ section.settings.blocktitle }}</h2>
@@ -25,11 +25,19 @@
         [ 
             { 
                 "type": "image_picker",
-
-                "max-width": 570,
-                "max-height": 570,
                 "id": "img", 
                 "label": "Title" 
+            },
+            {
+                "type": "range",
+                "id": "imgrange",
+                "label": "",
+                "min": 230,
+                "max": 570,
+                "step": 20,
+                "unit": "px",
+                "label": "Font size",
+                "default": 570
             },
             { 
                 "type": "text",
