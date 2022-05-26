@@ -1,76 +1,64 @@
-<div class="multicolumn color-background-1 gradient background-none">
-    <div class="page-width section-template--16046704591081__multicolumn-padding isolate"> 
-      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
-         <h2 class="title h2">
-            {{ section.settings.title }}
-         </h2>
-      </div>  
-      <slider-component class="slider-mobile-gutter smg">
-        <ul class="multicolumn-list contains-content-container smg grid grid--1-col-tablet-down grid--3-col-desktop">
-          {% for block in section.blocks %}
-              <li class=""multicolumn-list__item grid__item center>
-            <div class="multicolumn-card content-container">
-              <div class="multicolumn-card__info">
-                <h3>{{ block.settings.title-text }}</h3>
-                <div class="rte">
-                  <p>{{ block.settings.block-text }}</p>
-                </div>
-              </div>
-            </div>
-          </li>
-          {% endfor %}
-        </ul>
-      </slider-component>
-    </div>
+<div class="block">
+  <div class="left_block">
+    <img src="{{ section.settings.img | img_url: 'master' | img_tag }}" alt="" />
   </div>
+  <div class="right_block">
+    <h2 id="block-title">{{ section.settings.blocktitle }}</h2>
+    <p id="block-text">
+      {{ section.settings.blocktext }}
+    </p>
+    {% if section.settings.link != blank and section.settings.linktext != blank %}
+
+    <a href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
+
+    {% else %}
   
-  <style>
-    
-    .smg{
-        display:flex;
-      justify-content: space-between;
-  /*     flex-wrap: nowrap;  */
-    }
-  
-  </style>
-  
-  {% schema %}
-  {
-    "name": "Liquid Basics Example",
-    "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Title"
-      }
-    ],
-    "blocks": [
-       {
-         "name": "Custom Blocks",
-         "type": "text",
-         "limit": 3,
-         "settings": [
-           {
-             "type": "text",
-             "id": "title-text",
-             "label": "Title Text"
-           },
-           {
-             "type": "text",
-             "id": "block-text",
-             "label": "Block Text"
-           }
-         ]
-       }
-     ],
-      "presets": [
-           {
-      "name": "Information Text",
-      "category": "Image"
-      }
-      ]
-  }
-  {% endschema %}
-  
-  
-  
+    {% endif %}
+
+  </div>
+</div>
+
+{% schema %}
+ { 
+    "name": "Liquid Basics Example", 
+    "settings": 
+        [ 
+            { 
+                "type": "image_picker",
+
+                "max-width": 570,
+                "max-height": 570,
+                "id": "img", 
+                "label": "Title" 
+            },
+            { 
+                "type": "text",
+                "id": "blocktitle", 
+                "label": "Title" 
+            },
+            {
+                "type": "textarea",
+                "id": "blocktext",
+                "label": "text"
+            },
+            {
+                "id": "link",
+                "type": "url",
+                "label": "Button link"
+            },
+            {
+                "id": "linktext",
+                "type": "text",
+                "label": "Button text",
+                "default": "Click Here"
+            }
+        ],
+    "presets": 
+        [ 
+            { 
+                "name": "Information Text",
+                "category": "Image" 
+            } 
+        ] 
+ } 
+ {% endschema %}
