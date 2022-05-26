@@ -1,7 +1,7 @@
 <div class="block">
   <div class="left_block">
 
-    <img src="{{ section.settings.img | image_url: width: '570x' | loading: 'lazy' }}" alt="" />
+    <img src="{{ section.settings.img | image_url: width: section.settings.imagesize | loading: 'lazy' }}" alt="" />
     
   </div>
   <div class="right_block">
