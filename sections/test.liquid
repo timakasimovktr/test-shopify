@@ -1,6 +1,6 @@
 <div class="block">
   <div class="left_block">
-    <img src="{{ section.settings.img }}" alt="" />
+    <img src="{{ section.settings.img | img_url: '570x' }}" alt="" />
   </div>
   <div class="right_block">
     <h2 id="block-title">{{ section.settings.blocktitle }}</h2>
@@ -20,7 +20,7 @@
 
 <style>
   .left_block img {
-    width: sections.settings.imgrangepx;
+    width: 570px;
     height: 570px;
   }
 </style>
