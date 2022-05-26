@@ -6,8 +6,9 @@
         "settings": {
           "img": "shopify:\/\/shop_images\/chair.jpg",
           "imagesize": "570px",
+          "pos": true,
           "blocktitle": "Title",
-          "title_font_size": 30,
+          "title_font_size": 50,
           "blocktext": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           "font_size": 21,
           "link": "shopify:\/\/collections\/all",
