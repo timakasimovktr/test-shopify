@@ -28,8 +28,8 @@
 <style>
 
 .left_block img {
-  width: 70%;
-  height: 70%;
+  width: {{section.settings.imagesize}};
+  height: {{section.settings.imagesize}};
 }
 
 {%- if section.settings.pos -%}
@@ -67,7 +67,7 @@
   "label" : "Image size",
   "options": [
     {
-    "value": "570px",
+    "value": "70%",
     "label": "Large size"
     },
     {
