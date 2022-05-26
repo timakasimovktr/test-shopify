@@ -1,6 +1,6 @@
 <div class="block">
   {%- if section.settings.pos -%}
-  {%- endif -%}
+  
   <div class="left_block">
 
     <img src="{{ section.settings.img | image_url: width: section.settings.imagesize | loading: 'lazy' }}" alt="" />
@@ -22,6 +22,7 @@
     {% endif %}
 
   </div>
+  {%- endif -%}
 </div>
 
 
