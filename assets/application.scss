@@ -31,21 +31,26 @@ body {
 }
 
 .left_block img{
-  width: 80%;
-  height: 80%;
+  width: 570px;
+  height: 570px;
+}
+
+.left_block img {
+  width: 70%;
+  height: 70%;
 }
 
 .right_block {
   width: 50%;
   display: flex;
   justify-content: center;
-  // align-items: center;
+  align-items: center;
   flex-direction: column;
   /* margin-left: 15px; */
 }
 
 .right_block h2 {
-  // text-align: center;
+  text-align: center;
   width: 100%;
   font-size: 40px;
   font-weight: bold;
@@ -57,7 +62,7 @@ body {
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 40px;
-  // text-align: center;
+  text-align: center;
 }
 
 .right_block a {
@@ -88,9 +93,9 @@ body {
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1100px) {
   .block {
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 }
 
