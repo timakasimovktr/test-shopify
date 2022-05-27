@@ -23,17 +23,19 @@
     </div>
   
 </div>
+{% if section.settings.imagesize %}
 
+<style>
+  .left_block img {
+    width: 80%;
+  }
+</style>
+
+{% endif %}
 
 <style>
 
-{% if section.settings.imagesize %}
 
-.left_block img {
-  width: 80%;
-}
-
-{% endif %}
 
 
 {% if section.settings.pos %}
@@ -52,7 +54,7 @@
 .right_block{
   order: 2;
 }
-{%- endif -%}
+{% endif %}
 
 </style>
 
