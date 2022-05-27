@@ -5,7 +5,7 @@
       "type": "test",
       "settings": {
         "img": "shopify:\/\/shop_images\/chair.jpg",
-        "imagesize": "50",
+        "imagesize": "70",
         "pos": false,
         "blocktitle": "Titile text",
         "title_color": "#000000",
