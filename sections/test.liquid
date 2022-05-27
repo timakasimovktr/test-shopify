@@ -23,19 +23,19 @@
     </div>
   
 </div>
-{% if section.settings.imagesize == '80%' %}
 
+
+{% if section.settings.imagesize == 80 %}
 <style>
   .left_block img {
-    width: 80%;
-  }
-</style>
+      width: 80%;
 
+    }
+</style>
 {% endif %}
 
 <style>
-
-
+  
 
 
 {% if section.settings.pos %}
@@ -60,87 +60,7 @@
 
 {% schema %}
 {
-"name": "Liquid Basics Example",
-"settings": [
-{
-"type": "image_picker",
-"id": "img",
-"label": "Title"
-},
-{
-  "type": "select",
-  "id" : "imagesize",
-  "label" : "Image size",
-  "options": [
-    {
-    "value": "80%",
-    "label": "Large size"
-    },
-    {
-    "value": "70%",
-    "label": "Medium size"
-    },
-    {
-    "value": "60%",
-    "label": "Small size"
-    }
-  ],
-  "default": "70%"
-},
-{
-  "type":"checkbox",
-  "id": "pos",
-  "label": "Text first",
-  "default": false
-},
-{
-"type": "text",
-"id": "blocktitle",
-"label": "Title text"
-},
-{
-"type": "range",
-"id": "title_font_size",
-"min": 14,
-"max": 50,
-"step": 1,
-"unit": "px",
-"label": "Title font-size",
-"default": 30
-},
-{
-"type": "textarea",
-"id": "blocktext",
-"label": "Text description"
-},
-{
-"type": "range",
-"id": "font_size",
-"min": 14,
-"max": 26,
-"step": 1,
-"unit": "px",
-"label": "Font size",
-"default": 16
-},
-{
-"id": "link",
-"type": "url",
-"label": "Button link"
-},
-{
-"id": "linktext",
-"type": "text",
-"label": "Button text",
-"default": "Click Here"
-}
-],
-"presets": [
-{
-"name": "Information Text",
-"category": "Image"
-}
-]
+
 }
 
 {% endschema %}
