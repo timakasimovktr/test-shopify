@@ -7,10 +7,20 @@
     </div>
     <div class="right_block">
       {% comment %} <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px;"> {% endcomment %}
-      <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px; color: {{- section.settings.title_color -}};">{{ section.settings.enblocktitle }}</h2>
+      <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px; color: {{- section.settings.title_color -}};">
+        {% if section.settings.language == "en" %}
+        {{ section.settings.enblocktitle }}
+        {%- elsif section.settings.language == "fr" -%}
+        {{ section.settings.frblocktitle }}
+        {% endif %}
+      </h2>
 
       <p id="block-text" style="font-size: {{- section.settings.font_size -}}px; color: {{- section.settings.desc_color -}};">
+        {% if section.settings.language == "en" %}
         {{ section.settings.enblocktext }}
+        {%- elsif section.settings.language == "fr" -%}
+        {{ section.settings.frblocktext }}
+        {% endif %}
       </p>
 
       {% if section.settings.link != blank and section.settings.linktext != blank %}
@@ -192,19 +202,19 @@
             {
               "type": "select",
               "id" : "language",       
-              "label" : "Text align",
+              "label" : "Choose language",
               "options": 
                 [
                     {
-                      "value": "left",
-                      "label": "Left"
+                      "value": "en",
+                      "label": "English"
                     },
                     {
-                      "value": "center",
-                      "label": "Center"
+                      "value": "fr",
+                      "label": "French"
                     }
                 ],
-                "default": "center"
+                "default": "en"
             },
 
             {
