@@ -1,0 +1,13 @@
+{
+  "wrapper": "div#div_id.div_class[attribute-one=value]",
+  "sections": {
+    "test": {
+      "type": "test",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "test"
+  ]
+}
