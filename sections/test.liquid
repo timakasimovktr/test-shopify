@@ -2,7 +2,7 @@
   
     <div class="left_block">
 
-      <img src="{{ section.settings.img | loading: 'lazy' }}" alt="" />
+      <img src="{{ section.settings.img }}" alt="" />
       
     </div>
     <div class="right_block">
@@ -24,15 +24,10 @@
   
 </div>
 
-
-{% if section.settings.imagesize == '80' %}
 <style>
-  .left_block img {
-      width: 80%;
-      height: 80%;
-    }
+  
 </style>
-{% endif %}
+
 
 <style>
   
@@ -137,7 +132,7 @@
               "default": "Click Here"
             }
         ],
-    "presets": 
+        "presets": 
         [
             {
                 "name": "Information Text",
