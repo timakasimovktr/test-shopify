@@ -66,10 +66,12 @@
 
 {% if section.settings.text_align == "left" %}
 .right_block{
-  align-items: ;
+  align-items: left;
 }
 {%- elsif section.settings.text_align == "center" -%}
-
+.right_block{
+  align-items: left;
+}
 {% endif %}
 
 .right_block h2{
