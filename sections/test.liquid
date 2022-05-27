@@ -5,7 +5,7 @@
       <img src="{{ section.settings.img | img_url: 'medium' | loading: 'lazy'}}" alt="" />
       
     </div>
-    <div class="right_block">
+    <div class="right_block" style="justify-content: {{section.content.text_align}};">
       {% comment %} <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px;"> {% endcomment %}
       <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px; color: {{- section.settings.title_color -}};">{{ section.settings.blocktitle }}</h2>
 
@@ -147,24 +147,24 @@
             },
             {
               "type": "select",
-              "id" : "text_align",
+              "id" : "text_align",       
               "label" : "Text align",
               "options": 
                 [
                     {
                       "value": "flex-start",
-                      "label": ""
+                      "label": "Left"
                     },
                     {
-                      "value": "60",
-                      "label": "Medium size"
+                      "value": "center",
+                      "label": "Center"
                     },
                     {
-                      "value": "50",
-                      "label": "Small size"
+                      "value": "flex and",
+                      "label": "Right"
                     }
                 ],
-                "default": "60"
+                "default": "center"
           },
             {
               "id": "link",
