@@ -23,7 +23,7 @@
       "settings": {
         "img": "shopify:\/\/shop_images\/sofa.jpg",
         "imagesize": "70",
-        "pos": false,
+        "pos": true,
         "blocktitle": "Title second text",
         "title_color": "#000000",
         "title_font_size": 30,
