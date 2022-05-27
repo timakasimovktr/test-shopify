@@ -25,29 +25,27 @@
 </div>
 
 {% if section.settings.imagesize == "80" %}
-<style>
+
   .left_block img {
       width: 80%;
       height: 80%;
     }
-</style>
 {%- elsif section.settings.imagesize == "70" -%}
-<style>
+
   .left_block img {
       width: 70%;
       height: 70%;
     }
-</style>
+
 {%- else -%}
-<style>
+
   .left_block img {
       width: 60%;
       height: 60%;
     }
-</style>
 {% endif %}
 
-<style>
+
 
 {% if section.settings.pos %}
 .left_block{
