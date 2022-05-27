@@ -1,29 +1,12 @@
 {
   "wrapper": "div#div_id.div_class[attribute-one=value]",
   "sections": {
-    "test": {
-      "type": "test",
-      "settings": {
-        "img": "shopify:\/\/shop_images\/chair.jpg",
-        "imagesize": "70",
-        "pos": true,
-        "blocktitle": "Titile text",
-        "title_color": "#000000",
-        "title_font_size": 45,
-        "blocktext": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-        "desc_color": "#3f3f3f",
-        "font_size": 16,
-        "text_align": "center",
-        "link": "shopify:\/\/collections",
-        "linktext": "Click Here"
-      }
-    },
     "1653676594dfcaeec4": {
       "type": "test",
       "settings": {
         "img": "shopify:\/\/shop_images\/sofa.jpg",
         "imagesize": "70",
-        "pos": true,
+        "pos": false,
         "blocktitle": "Title second text",
         "title_color": "#000000",
         "title_font_size": 30,
@@ -34,10 +17,27 @@
         "link": "shopify:\/\/collections",
         "linktext": "Click Here"
       }
+    },
+    "test": {
+      "type": "test",
+      "settings": {
+        "img": "shopify:\/\/shop_images\/chair.jpg",
+        "imagesize": "70",
+        "pos": false,
+        "blocktitle": "Titile text",
+        "title_color": "#000000",
+        "title_font_size": 45,
+        "blocktext": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "desc_color": "#3f3f3f",
+        "font_size": 16,
+        "text_align": "center",
+        "link": "shopify:\/\/collections",
+        "linktext": "Click Here"
+      }
     }
   },
   "order": [
-    "test",
-    "1653676594dfcaeec4"
+    "1653676594dfcaeec4",
+    "test"
   ]
 }
