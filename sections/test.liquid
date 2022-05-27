@@ -70,7 +70,11 @@
 }
 {%- elsif section.settings.text_align == "center" -%}
 .right_block{
-  align-items: left;
+  align-items: center;
+}
+{%- elsif section.settings.text_align == "right" -%}
+.right_block{
+  align-items: right;
 }
 {% endif %}
 
