@@ -118,11 +118,11 @@ body {
   }
 
   .left_block{
-    order: 1;
+    order: 1 !important; 
   }
   
   .right_block{
-    order: 2;
+    order: 2 !important;
   }
 }
 
