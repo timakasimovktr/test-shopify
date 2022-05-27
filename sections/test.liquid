@@ -26,6 +26,8 @@
 </div>
 
 
+
+
 <style>
 {% if section.settings.imagesize == "70" %}
   .left_block img {
@@ -83,6 +85,38 @@
 }
 .right_block p{
   text-align: {{ section.settings.text_align }};
+}
+
+@media (max-width: 600px) {
+  .block {
+    flex-direction: column;
+  }
+
+  body{
+    padding: 0 10px;
+  }
+
+  .left_block{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .right_block{
+    width: 100%;
+  }
+
+  .left_block img{
+    width: 90%;
+    height: 90%;
+  }
+
+  .left_block{
+    order: 1 !important; 
+  }
+  
+  .right_block{
+    order: 2 !important;
+  }
 }
 
 </style>
