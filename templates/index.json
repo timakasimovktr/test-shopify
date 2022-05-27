@@ -26,7 +26,7 @@
         "pos": false,
         "blocktitle": "Titile text",
         "title_color": "#000000",
-        "title_font_size": 45,
+        "title_font_size": 35,
         "blocktext": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
         "desc_color": "#3f3f3f",
         "font_size": 16,
