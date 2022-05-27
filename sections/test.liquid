@@ -7,7 +7,7 @@
     </div>
     <div class="right_block">
       {% comment %} <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px;"> {% endcomment %}
-      <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px;">{{ section.settings.blocktitle }}</h2>
+      <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px; color: {{- section.settings.title_color -}};">{{ section.settings.blocktitle }}</h2>
 
       <p id="block-text" style="font-size: {{- section.settings.font_size -}}px; color: {{- section.settings.desc_color -}};">
         {{ section.settings.blocktext }}
@@ -132,7 +132,7 @@
             {
               "type": "color",
               "id" : "desc_color",
-              "label": "Description color",
+              "label": "Description text color",
               "default": "#000000"
             },
             {
