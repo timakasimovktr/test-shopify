@@ -25,7 +25,7 @@
       "type": "test",
       "settings": {
         "img": "shopify:\/\/shop_images\/chair.jpg",
-        "imagesize": "70",
+        "imagesize": "50",
         "pos": false,
         "enblocktitle": "English title",
         "frblocktitle": "French title",
