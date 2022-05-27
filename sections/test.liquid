@@ -64,7 +64,11 @@
 }
 {% endif %}
 
+{% if section.settings.text_align == "left" %}
 
+{%- else -%}
+
+{% endif %}
 
 .right_block h2{
   text-align: {{ section.settings.text_align }};
