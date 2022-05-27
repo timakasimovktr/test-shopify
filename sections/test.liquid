@@ -2,7 +2,7 @@
   
     <div class="left_block">
 
-      <img src="{{ section.settings.img | img_url: 'medium'}}" alt="" />
+      <img src="{{ section.settings.img | img}}" alt="" />
       
     </div>
     <div class="right_block">
@@ -28,6 +28,14 @@
   
 </style>
 
+{% if section.settings.imagesize == 80 %}
+<style>
+  .left_block img {
+      width: 80%;
+      height: 80%;
+    }
+</style>
+{% endif %}
 
 <style>
   
