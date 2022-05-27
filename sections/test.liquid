@@ -27,16 +27,16 @@
 
 <style>
 
-{%- if section.settings.imagesize == '80%' -%}
+{% if section.settings.imagesize %}
 
 .left_block img {
   width: 80%;
 }
 
-{%- endif -%}
+{% endif %}
 
 
-{%- if section.settings.pos -%}
+{% if section.settings.pos -%}
 .left_block{
   order: 2;
 }
