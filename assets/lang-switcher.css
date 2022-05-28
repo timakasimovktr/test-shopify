@@ -15,7 +15,8 @@
 
 .dropup-content{
     display: none;
-
+    position: fixed;
+    bottom: ;
 }
 
 .dropup:hover  .dropup-content{
