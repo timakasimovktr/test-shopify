@@ -1,6 +1,7 @@
 {% form 'localization', id: "localization_form_tag", class: "dropup" %}
 <button class="localBtn" disabled>Localization</button>
 <div class="dropup-content">
-    {}
+    {% for local in shop.published_locales %}
+    {% endfor %}
 </div>
 {% endform %}
