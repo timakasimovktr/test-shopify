@@ -5,7 +5,7 @@
     
 
     {% for locale in shop.published_locales %}
-    {{ locale.name }} ({{ locale.iso_code }})
+    <a href="#">{{ locale.endonym_name }}</a>
     {% endfor %}
 </div>
 {% endform %}
