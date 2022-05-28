@@ -19,5 +19,5 @@
 }
 
 .localBtn:hover .dropup-content{
-     
+    display: block;
 }
