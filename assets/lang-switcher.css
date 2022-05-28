@@ -18,6 +18,6 @@
 
 }
 
-.localBtn:hover .dropup-content{
+.localBtn:hover  .dropup-content{
     display: block;
 }
