@@ -3,6 +3,7 @@
 <div class="dropup-content">
     
     <select>
+        {{ shop.published_locales }}
     {% for locale in shop.published_locales %}
         <option>
             <a href="#">{{ locale.endonym_name }}</a>
