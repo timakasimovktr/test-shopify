@@ -2,7 +2,7 @@
 <button class="localBtn" disabled>Localization</button>
 <div class="dropup-content">
     {% for local in shop.published_locales %}
-        <a href="#">{{}}</a>
+        <a href="#">{{ local.endonym}}</a>
     {% endfor %}
 </div>
 {% endform %}
