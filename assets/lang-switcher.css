@@ -3,7 +3,7 @@
     display: inline-block;
 }
 
-.localBtn{
+.localeBtn{
     background-color: #3298DB;
     color: white;
     padding: 15px;
@@ -19,6 +19,7 @@
     bottom: 80px;
     right: 25px;
     min-height: 110px;
+    z-index: 1;
 }
 
 .dropup:hover  .dropup-content{
