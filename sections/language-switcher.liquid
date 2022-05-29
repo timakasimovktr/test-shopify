@@ -2,12 +2,9 @@
 <button class="localBtn" disabled>Localization</button>
 <div class="dropup-content">
 
-    <select>
-        {% for locale in shop.published_locales %}
-        <option>
-            <a href="#">{{ locale.endonym_name }}</a>
-        </option>
-        {% endfor %}
-    </select>
+
+    {% for locale in shop.published_locales %}
+        <a href="#">{{ locale.endonym_name }}</a>
+    {% endfor %}
 </div>
 {% endform %}
