@@ -8,6 +8,8 @@
     <div class="right_block">
       {% comment %} <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px;"> {% endcomment %}
         {% if section.settings.language == "en" %}
+      <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px; color: {{- section.settings.title_color -}};">
+
         {{ section.settings.enblocktitle }}
         {%- elsif section.settings.language == "fr" -%}
       <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px; color: {{- section.settings.title_color -}};">
