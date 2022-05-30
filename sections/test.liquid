@@ -39,7 +39,9 @@
   {% if section.settings.language == en %}
     <option>English</option>
   {% endif %}
-  <option></option>
+  {% if section.settings.language == en %}
+    <option>English</option>
+  {% endif %}
 </select>
 {% endfor %}
 
