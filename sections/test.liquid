@@ -47,19 +47,21 @@
 
 
 {% javascript %}
-$(document).ready(function(){ 
-  var select = document.querySelectorAll('#lang');
-  select.addEventListener("change", function(){
-    alert(select.value);
-  });
-});
+
 
 function start(){
   document.getElementById("lang").addEventListener("change", addActivityItem, false);
 }
 
+function addActivityItem(){
+  //option is selected
+  alert("yeah");
+}
+
 window.addEventListener("load", start, false);
 {% endjavascript %}
+
+/
 
 <!-- select.change(function()
     { var selectedlanguage = this.children("option:selected").val();
