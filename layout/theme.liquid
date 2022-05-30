@@ -1,4 +1,5 @@
 <!doctype html>
+
 <head>
   <title>{{ page_title }}</title>
   <meta charset="utf-8">
@@ -6,11 +7,13 @@
   <meta name="description" content="{{ page_description | escape }}">
   <link rel="canonical" href="{{ canonical_url }}">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  {{ content_for_header }} <!-- Header hook for plugins -->
+  {{ content_for_header }}
+  <!-- Header hook for plugins -->
   {{ 'application.scss.css' | asset_url | stylesheet_tag }}
   {{ 'lang-switcher.css' | asset_url | stylesheet_tag }}
   {{ 'application.js' | asset_url | script_tag }}
 </head>
+
 <body>
 
   <!-- {% for link in linklists.main-menu.links %}
@@ -45,37 +48,50 @@
     <option value="en">English</option>
     <option value="fr">French</option>
   </select>
-  
+
   <script>
 
+    function start() {
+      var select = document.getElementById('lang');
+      select.addEventListener("change", addActivityItem);
+    }
+
+    function addActivityItem() {
+      var eng = document.querySelector(".eng");
+      var en = document.querySelector(".en");
+      var frch = document.querySelector(".frch");
+      var fr = document.querySelector(".fr");
+      if (this.value == "en") {
+        for (let i = 0; i < nodeList.length; i++) {
+          en[i].classList.remove("dlt");
+        }
+        for (let i = 0; i < nodeList.length; i++) {
+          eng[i].classList.remove("dlt");
+        }
+        for (let i = 0; i < nodeList.length; i++) {
+          eng[i].classList.remove("dlt");
+        }
+        for (let i = 0; i < nodeList.length; i++) {
+          eng[i].classList.remove("dlt");
+        }
+        en.classList.remove("dlt");
+        eng.classList.remove("dlt");
+        fr.classList.add("dlt");
+        frch.classList.add("dlt");
+      } else {
+        fr.classList.remove("dlt");
+        frch.classList.remove("dlt");
+        en.classList.add("dlt");
+        eng.classList.add("dlt");
+      }
+    }
+
+    window.addEventListener("load", start, false);
 
 
   </script>
-  
-  function start(){
-    var select = document.getElementById('lang');
-    select.addEventListener("change", addActivityItem);
-  }
-  
-  function addActivityItem(){
-    var eng = document.querySelector(".eng");
-    var en = document.querySelector(".en");
-    var frch = document.querySelector(".frch");
-    var fr = document.querySelector(".fr");
-    if (this.value == "en"){
-      en.classList.remove("dlt");
-      eng.classList.remove("dlt");
-      fr.classList.add("dlt");
-      frch.classList.add("dlt");
-    } else {
-      fr.classList.remove("dlt");  
-      frch.classList.remove("dlt");  
-      en.classList.add("dlt");
-      eng.classList.add("dlt");
-    }
-  }
-  
-  window.addEventListener("load", start, false);
+
   {% section 'language-switcher' %}
 </body>
+
 </html>
