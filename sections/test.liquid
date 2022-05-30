@@ -55,9 +55,16 @@ function start(){
 }
 
 function addActivityItem(){
-  //option is selected
-  alert(select.value);
-
+  switch (selector.value) {
+    case "add":
+    //do somthing with  , "add" value
+      result.innerHTML = selector.value;
+      break;  // then take break
+    case "remove":
+    //do somthing with  , "remove" value
+      result.innerHTML = selector.value;
+      break; // then take break
+  }
 }
 
 window.addEventListener("load", start, false);
