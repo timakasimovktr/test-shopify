@@ -54,11 +54,11 @@ function start(){
 }
 
 function addActivityItem(){
+  var en = document.querySelector(".en");
+  var fr = document.querySelector(".fr");
   if (this.value == "en"){
-    var en = document.querySelector(".en");
     en.classList.remove("dlt");
   } else {
-    var fr = document.querySelector(".fr");
     fr.classList.remove("dlt");  
   }
 }
