@@ -48,8 +48,8 @@
 {% javascript %}
 $(document).ready(function(){ 
   var select = document.querySelector('#lang');
-  $("#lang").change(function()
-    { var selectedlanguage = $(this).children("option:selected").val();
+  select.change(function()
+    { var selectedlanguage = this.children("option:selected").val();
       var blockText = $("#block-text");
       if (selectedlanguage == "French"){
         blockText.html("<p>" + {{ section.settings.frblocktext }} + "</p>")
