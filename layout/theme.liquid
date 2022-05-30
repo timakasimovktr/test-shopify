@@ -57,10 +57,10 @@
     }
 
     function addActivityItem() {
-      var eng = document.querySelector(".eng");
-      var en = document.querySelector(".en");
-      var frch = document.querySelector(".frch");
-      var fr = document.querySelector(".fr");
+      var eng = document.querySelectorAll(".eng");
+      var en = document.querySelectorAll(".en");
+      var frch = document.querySelectorAll(".frch");
+      var fr = document.querySelectorAll(".fr");
       if (this.value == "en") {
         for (let i = 0; i < en.length; i++) {
           en[i].classList.remove("dlt");
@@ -74,6 +74,7 @@
         for (let i = 0; i < frch.length; i++) {
           frch[i].classList.add("dlt");
         }
+
         // en.classList.remove("dlt");
         // eng.classList.remove("dlt");
         // fr.classList.add("dlt");
@@ -91,6 +92,7 @@
         for (let i = 0; i < frch.length; i++) {
           frch[i].classList.remove("dlt");
         }
+        
         // fr.classList.remove("dlt");
         // frch.classList.remove("dlt");
         // en.classList.add("dlt");
