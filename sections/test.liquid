@@ -53,6 +53,11 @@ $(document).ready(function(){
     alert(select.value);
   });
 });
+
+function start(){
+  document.getElementById("activitySelector").addEventListener("change", addActivityItem, false);
+  }
+
 window.addEventListener("load", start, false);
 {% endjavascript %}
 
