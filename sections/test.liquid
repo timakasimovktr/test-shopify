@@ -46,6 +46,8 @@
   <option value="fr">French</option>
 </select>
 
+<div id="result"></div>
+
 
 
 {% javascript %}
@@ -256,7 +258,24 @@ window.addEventListener("load", start, false);
               "default": 16
             },
 
+            {
+              "type": "select",
+              "id" : "language",       
+              "label" : "Choose language",
+              "options": 
+                [
+                    {
+                      "value": "en",
+                      "label": "English"
+                    },
+                    {
+                      "value": "fr",
+                      "label": "French"
+                    }
+                ],
+                "default": "en"
 
+            },
 
             {
               "type": "select",
