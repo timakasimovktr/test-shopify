@@ -48,15 +48,13 @@
 
 {% javascript %}
 
-var result = document.getElementById("result"); 
-
 function start(){
   var select = document.getElementById('lang');
   select.addEventListener("change", addActivityItem, false);
 }
 
 function addActivityItem(){
-  console.log(select);
+  alert("yeah");
 }
 
 window.addEventListener("load", start, false);
