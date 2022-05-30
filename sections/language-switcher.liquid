@@ -1,7 +1,5 @@
 {% form 'localization', id: "localization_form_tag", class: "dropup" %}
 
-    {% for locale in shop.published_locales %}
-    <a href="#">{{ locale.name }} ({{ locale.iso_code }})</a>
-    {% endfor %}
+    
 
 {% endform %}
