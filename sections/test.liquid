@@ -16,7 +16,7 @@
       </h2>
 
       {% if section.settings.language == "en" %}
-      <p class=id="block-text" style="font-size: {{- section.settings.font_size -}}px; color: {{- section.settings.desc_color -}};">
+      <p class="en" id="block-text" style="font-size: {{- section.settings.font_size -}}px; color: {{- section.settings.desc_color -}};">
         {{ section.settings.enblocktext }}
       </p>
       {%- elsif section.settings.language == "fr" -%}
