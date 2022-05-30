@@ -40,23 +40,6 @@
   
 </div>
 
-{% if section.settings.pos %}
-.left_block{
-  order: 2;
-}
-
-.right_block{
-  order: 1;
-}
-{%- else -%}
-.left_block{
-  order: 1;
-}
-
-.right_block{
-  order: 2;
-}
-{% endif %}
 
 <style>
 
@@ -76,6 +59,25 @@
       height: 50%;
     }
 {% endif %}
+
+{% if section.settings.pos %}
+.left_block{
+  order: 2;
+}
+
+.right_block{
+  order: 1;
+}
+{%- else -%}
+.left_block{
+  order: 1;
+}
+
+.right_block{
+  order: 2;
+}
+{% endif %}
+
 
 {% if section.settings.text_align == "left" %}
 .right_block{
