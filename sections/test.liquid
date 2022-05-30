@@ -50,9 +50,10 @@ var select = document.getElementById('lang');
 });
 
 $(document).ready(function(){ 
-  $("select.country").change(function()
+  $("#lang").change(function()
     { var selectedCountry = $(this).children("option:selected").val(); 
-    alert("Вы выбрали страну - " + selectedCountry); });
+    alert("Вы выбрали страну - " + selectedCountry); 
+  });
 });
 {% endjavascript %}
 
