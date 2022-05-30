@@ -8,26 +8,26 @@
     <div class="right_block">
       {% comment %} <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px;"> {% endcomment %}
         <!-- {% if section.settings.language == "en" %} -->
+      <h2 class="eng" id="block-title" style="font-size: {{- section.settings.title_font_size -}}px; color: {{- section.settings.title_color -}};">
+        {{ section.settings.enblocktitle }}
+      </h2>
         <!-- {%- elsif section.settings.language == "fr" -%} -->
-        <!-- {% endif %} -->
-        <h2 class="eng" id="block-title" style="font-size: {{- section.settings.title_font_size -}}px; color: {{- section.settings.title_color -}};">
-          {{ section.settings.enblocktitle }}
-        </h2>
       <h2 class="frch dlt" id="block-title" style="font-size: {{- section.settings.title_font_size -}}px; color: {{- section.settings.title_color -}};">
         {{ section.settings.frblocktitle }}
       </h2>
+      <!-- {% endif %} -->
 
       
       <!-- {% if section.settings.language == "en" %} -->
-      <!-- {%- elsif section.settings.language == "fr" -%} -->
-      <!-- {% endif %} -->
       <p class="en" id="block-text" style="font-size: {{- section.settings.font_size -}}px; color: {{- section.settings.desc_color -}};">
         {{ section.settings.enblocktext }}
       </p>
       
+      <!-- {%- elsif section.settings.language == "fr" -%} -->
       <p class="fr dlt" id="block-text" style="font-size: {{- section.settings.font_size -}}px; color: {{- section.settings.desc_color -}};">
         {{ section.settings.frblocktext }}
       </p>
+      <!-- {% endif %} -->
 
       {% if section.settings.link != blank and section.settings.linktext != blank %}
 
@@ -253,6 +253,25 @@ window.addEventListener("load", start, false);
               "label": "Description font size",
               "default": 16
             },
+
+            {
+              "type": "select",
+              "id" : "language",       
+              "label" : "Choose language",
+              "options": 
+                [
+                    {
+                      "value": "en",
+                      "label": "English"
+                    },
+                    {
+                      "value": "fr",
+                      "label": "French"
+                    }
+                ],
+              "default": "en"
+            },
+
             {
               "type": "select",
               "id" : "text_align",       
