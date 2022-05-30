@@ -48,17 +48,19 @@
 {% javascript %}
 $(document).ready(function(){ 
   var select = document.querySelector('#lang');
-  select.change(function()
+  
+});
+{% endjavascript %}
+
+<!-- select.change(function()
     { var selectedlanguage = this.children("option:selected").val();
       var blockText = $("#block-text");
       if (selectedlanguage == "French"){
-        blockText.html("<p>" + {{ section.settings.frblocktext }} + "</p>")
+        blockText.html("<p>" +  + "</p>")
       }
       
     }
-  );
-});
-{% endjavascript %}
+  ); -->
 
 
 <style>
