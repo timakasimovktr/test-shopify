@@ -7,11 +7,11 @@
     </div>
     <div class="right_block">
       {% comment %} <h2 id="block-title" style="font-size: {{- section.settings.title_font_size -}}px;"> {% endcomment %}
-        <!-- {% if section.settings.language == "en" %} -->
+        {% if section.settings.language == "en" %}
       <h2 class="eng" id="block-title" style="font-size: {{- section.settings.title_font_size -}}px; color: {{- section.settings.title_color -}};">
         {{ section.settings.enblocktitle }}
       </h2>
-        <!-- {%- elsif section.settings.language == "fr" -%} -->
+        {%- elsif section.settings.language == "fr" -%}
       <h2 class="frch dlt" id="block-title" style="font-size: {{- section.settings.title_font_size -}}px; color: {{- section.settings.title_color -}};">
         {{ section.settings.frblocktitle }}
       </h2>
