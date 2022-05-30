@@ -47,7 +47,7 @@
 
 {% javascript %}
 $(document).ready(function(){ 
-  var select = document.querySelector('#select').getElementsByTagName('option');
+  var select = document.querySelector('#lang');
   $("#lang").change(function()
     { var selectedlanguage = $(this).children("option:selected").val();
       var blockText = $("#block-text");
