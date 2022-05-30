@@ -23,7 +23,6 @@
     },
     "test": {
       "type": "test",
-      "disabled": true,
       "settings": {
         "img": "shopify:\/\/shop_images\/chair.jpg",
         "imagesize": "50",
