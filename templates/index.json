@@ -6,7 +6,7 @@
       "settings": {
         "img": "shopify:\/\/shop_images\/sofa.jpg",
         "imagesize": "70",
-        "pos": true,
+        "pos": false,
         "enblocktitle": "English title",
         "frblocktitle": "French title",
         "title_color": "#000000",
@@ -23,6 +23,7 @@
     },
     "test": {
       "type": "test",
+      "disabled": true,
       "settings": {
         "img": "shopify:\/\/shop_images\/chair.jpg",
         "imagesize": "50",
