@@ -36,10 +36,9 @@
 </div>
 {% for locale in shop.published_locales %}
 <select>
-  {% if section.settings %}
-    
-  {% endif %}
+  {% if section.settings.language == en %}
   <option></option>
+  {% endif %}
   <option></option>
 </select>
 {% endfor %}
