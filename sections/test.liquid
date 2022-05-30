@@ -56,11 +56,10 @@ function start(){
 function addActivityItem(){
   if (this.value == "en"){
     var en = document.querySelector(".en");
-    dlt.classList.remove("dlt");
+    en.classList.remove("dlt");
   } else {
-    var fr = document.querySelector(".en");
-    dlt.classList.remove("dlt");
-    
+    var fr = document.querySelector(".fr");
+    fr.classList.remove("dlt");  
   }
 }
 
