@@ -49,7 +49,7 @@
 {% javascript %}
 $(document).ready(function(){ 
   var select = document.querySelector('#lang');
-  select.addEventListener("change",  {
+  select.addEventListener("change", function(){
     alert(event.target.value);
   });
 });
