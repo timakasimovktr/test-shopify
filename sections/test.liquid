@@ -51,12 +51,14 @@
 
 function start(){
   var select = document.getElementById('lang');
+  
   select.addEventListener("change", addActivityItem, false);
 }
 
 function addActivityItem(){
   //option is selected
   alert(select.value);
+
 }
 
 window.addEventListener("load", start, false);
