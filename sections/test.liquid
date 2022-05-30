@@ -15,13 +15,16 @@
         {% endif %}
       </h2>
 
+      {% if section.settings.language == "en" %}
       <p id="block-text" style="font-size: {{- section.settings.font_size -}}px; color: {{- section.settings.desc_color -}};">
-        {% if section.settings.language == "en" %}
         {{ section.settings.enblocktext }}
-        {%- elsif section.settings.language == "fr" -%}
-        {{ section.settings.frblocktext }}
-        {% endif %}
       </p>
+      {%- elsif section.settings.language == "fr" -%}
+      <p id="block-text" style="font-size: {{- section.settings.font_size -}}px; color: {{- section.settings.desc_color -}};">
+
+        {{ section.settings.frblocktext }}
+      </p>
+        {% endif %}
 
       {% if section.settings.link != blank and section.settings.linktext != blank %}
 
