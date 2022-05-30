@@ -42,6 +42,7 @@
   <option value="fr">French</option>
 </select>
 
+<div class="result"></div>
 
 
 
@@ -49,7 +50,8 @@
 $(document).ready(function(){ 
   var select = document.querySelector('#lang');
   select.addEventListener("change", (event) => {
-    result.textContent = `You like ${event.target.value}`;
+    const result = document.querySelector('.result');
+  result.textContent = `You like ${event.target.value}`;
   });
 });
 {% endjavascript %}
