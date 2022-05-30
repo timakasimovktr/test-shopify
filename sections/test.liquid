@@ -45,7 +45,11 @@
 
 {% javascript %}
 var select = document.getElementById('lang');
-
+select.addEventListener('change', function(){  
+  var getValue = this.value;
+  // this в этом контексте - элемент, который запустил фукнцию. То же, что и select.value;
+  console.log( getValue );
+});
 {% endjavascript %}
 
 
