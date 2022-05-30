@@ -40,24 +40,6 @@
   
 </div>
 
-<style>
-{% if section.settings.imagesize == "70" %}
-  .left_block img {
-      width: 70%;
-      height: 70%;
-    }
-{%- elsif section.settings.imagesize == "60" -%}
-  .left_block img {
-      width: 60%;
-      height: 60%;
-    }
-{%- else -%}
-  .left_block img {
-      width: 50%;
-      height: 50%;
-    }
-{% endif %}
-
 {% if section.settings.pos %}
 .left_block{
   order: 2;
@@ -74,6 +56,25 @@
 .right_block{
   order: 2;
 }
+{% endif %}
+
+<style>
+
+{% if section.settings.imagesize == "70" %}
+  .left_block img {
+      width: 70%;
+      height: 70%;
+    }
+{%- elsif section.settings.imagesize == "60" -%}
+  .left_block img {
+      width: 60%;
+      height: 60%;
+    }
+{%- else -%}
+  .left_block img {
+      width: 50%;
+      height: 50%;
+    }
 {% endif %}
 
 {% if section.settings.text_align == "left" %}
