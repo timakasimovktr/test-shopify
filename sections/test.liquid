@@ -48,6 +48,11 @@ var select = document.getElementById('lang');
   select.addEventListener('change', function(){  
     console.log(select);
 });
+
+$(document).ready(function(){ 
+  $("select.country").change(function()
+    { var selectedCountry = $(this).children("option:selected").val(); alert("Вы выбрали страну - " + selectedCountry); });
+});
 {% endjavascript %}
 
 
