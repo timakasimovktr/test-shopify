@@ -48,7 +48,7 @@
 
 {% javascript %}
 $(document).ready(function(){ 
-  var select = document.querySelector('#lang');
+  var select = document.querySelectorAll('#lang');
   select.addEventListener("change", function(){
     alert(select.value);
   });
